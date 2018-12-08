@@ -72,9 +72,9 @@ header {
       header #nav a:hover {
         color: #e37721; }
 
-#slider {
+.slider {
   width: 100%;
-  background: url("../img/photo-slider.jpg");
+  background: url("../img/photo-slider-0.jpg");
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -96,39 +96,39 @@ header {
        -o-transition-duration: 0.5s;
           transition-duration: 0.5s;
   -moz-transition-duration: 0.5s; }
-  #slider span {
+  .slider span {
     font-size: 14px;
     font-weight: 700;
     line-height: 28px;
     letter-spacing: 0.07px; }
-  #slider p {
+  .slider p {
     font-size: 12px;
     line-height: 20px;
     letter-spacing: 0.06px; }
-  #slider #slider-news-info {
+  .slider #slider-news-info {
     background-color: rgba(0, 0, 0, 0.5);
     height: 56px;
     width: 100%;
     padding-left: 10px; }
-    #slider #slider-news-info a {
+    .slider #slider-news-info a {
       color: #1dbaea; }
-      #slider #slider-news-info a:hover {
+      .slider #slider-news-info a:hover {
         color: #009ACB; }
-  #slider .slider-sidebar {
+  .slider .slider-sidebar {
     -webkit-box-shadow: -7px -1px 12px -7px #000000;
             box-shadow: -7px -1px 12px -7px #000000; }
-    #slider .slider-sidebar .active {
+    .slider .slider-sidebar .active {
       background: -webkit-gradient(linear, left bottom, left top, from(#1b88a9), to(#3fbbe7));
       background: -webkit-linear-gradient(bottom, #1b88a9 0%, #3fbbe7 100%);
       background: -o-linear-gradient(bottom, #1b88a9 0%, #3fbbe7 100%);
       background: linear-gradient(0deg, #1b88a9 0%, #3fbbe7 100%); }
-      #slider .slider-sidebar .active span {
+      .slider .slider-sidebar .active span {
         color: rgba(255, 255, 255, 0.85); }
-      #slider .slider-sidebar .active p {
+      .slider .slider-sidebar .active p {
         color: #e5faff; }
-      #slider .slider-sidebar .active .time {
+      .slider .slider-sidebar .active .time {
         color: #d0f2ff; }
-    #slider .slider-sidebar div {
+    .slider .slider-sidebar div {
       width: 245px;
       height: 57px;
       background: -webkit-gradient(linear, left bottom, left top, from(#212121), to(#2c2c2c));
@@ -141,11 +141,11 @@ header {
       padding-left: 10px;
       position: relative;
       cursor: pointer; }
-      #slider .slider-sidebar div span {
+      .slider .slider-sidebar div span {
         color: #d9d9d9; }
-      #slider .slider-sidebar div p {
+      .slider .slider-sidebar div p {
         color: #a6a6a6; }
-      #slider .slider-sidebar div .time {
+      .slider .slider-sidebar div .time {
         position: absolute;
         top: 5px;
         right: 15px;
@@ -461,3 +461,12 @@ footer {
     footer .end p {
       font-size: 12px;
       color: #565656; }
+
+.slider-bg-0
+  background: url(../img/photo-slider.jpg);
+.slider-bg-1
+  background: url(../img/photo-slider-bf.jpg);
+.slider-bg-2
+  background: url(../img/photo-slider-dr.jpg);
+.slider-bg-3
+  background: url(../img/photo-slider-gta.jpg);
