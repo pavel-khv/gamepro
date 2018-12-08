@@ -1,47 +1,23 @@
 //sidebar в слайдере
-var tabS = $('.tab-s');
-tabS.click(function (){
-	$(this).addClass('active');
-	$('.tab-s').not($(this)).removeClass('active');
-	var dt = $(this).attr('data-tab'); //при клике достаем значение data-tab
-	if (dt == 3) {
-		$('.gta-v').css('display', 'block');
-		$('#slider').css('background-image', 'url(img/photo-slider-gta.jpg)');
-		$('.tab-info').not($('.gta-v')).css('display', 'none');
-	}
-	else if(dt == 2) {
-		$('.driver-sf').css('display', 'block');
-		$('#slider').css('background-image', 'url(img/photo-slider-dr.jpg )');
-		$('.tab-info').not($('.driver-sf')).css('display', 'none');
-	}
-	else if(dt == 1) {
-		$('.bf-3').css('display', 'block');
-		$('#slider').css('background-image', 'url(img/photo-slider-bf.jpg )');
-		$('.tab-info').not($('.bf-3')).css('display', 'none');
-	}
-	else {
-		$('.ghost-recon').css('display', 'block');
-		$('#slider').css('background-image', 'url(img/photo-slider.jpg )');
-		$('.tab-info').not($('.ghost-recon')).css('display', 'none');
-	}
-});
+let tabS = $('.tab-s');
+tabS.on('click', function() {
+	$(this).addClass('active'); //делаем пункт активный
+	tabS.not($(this)).removeClass('active'); // у остальных убираем активный класс
 
-//активная ссылка навигационного меню
-var tabNav = $('#nav>li>a');
-tabNav.click(function(){
-	$(this).addClass('active-menu');
-	$('#nav>li>a').not($(this)).removeClass('active-menu');
+	let dt = $(this).attr('data-tab'); //при клике достаем значение data-tab
+	let di = $('.tab-info[data-info=' + dt + ']'); //получаем нужный элемент по data-info
+
+	di.css('display', 'block'); //показываем нужный текст
+	$('.tab-info').not(di).css('display', 'none'); // остальной текст скрываем
+	$('.slider').css('background-image', 'url(img/photo-slider-' + dt + '.jpg)'); //смена бэкграунд картинки
 });
 
 //ткрытие и закрытие навигации левого бара
-var leftNav = $('.navigation img');
-leftNav.click(function(){
+$('.navigation img').on('click', function() {
 	$('.navigation ul').slideToggle(400);
 });
 
 //открытие и закрытие второго блока левого бара
-var leftNav = $('.best-articles img');
-leftNav.click(function(){
+$('.best-articles img').on('click', function() {
 	$('.recon').slideToggle(400);
 });
-
