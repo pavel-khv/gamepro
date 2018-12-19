@@ -1,5 +1,5 @@
 //sidebar в слайдере
-let tabS = $('.tab-s');
+var tabS = $('.tab-s');
 tabS.on('click', function() {
 	$(this).addClass('active'); //делаем пункт активный
 	tabS.not($(this)).removeClass('active'); // у остальных убираем активный класс
