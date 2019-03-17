@@ -4,8 +4,8 @@ tabS.on('click', function() {
 	$(this).addClass('active'); //делаем пункт активный
 	tabS.not($(this)).removeClass('active'); // у остальных убираем активный класс
 
-	let dt = $(this).attr('data-tab'); //при клике достаем значение data-tab
-	let di = $('.tab-info[data-info=' + dt + ']'); //получаем нужный элемент по data-info
+	var dt = $(this).attr('data-tab'); //при клике достаем значение data-tab
+	var di = $('.tab-info[data-info=' + dt + ']'); //получаем нужный элемент по data-info
 
 	di.css('display', 'block'); //показываем нужный текст
 	$('.tab-info').not(di).css('display', 'none'); // остальной текст скрываем
