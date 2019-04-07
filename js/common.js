@@ -1,23 +1,23 @@
-//sidebar в слайдере
+//side panel in the slider
 var tabS = $('.tab-s');
 tabS.on('click', function() {
-	$(this).addClass('active'); //делаем пункт активный
-	tabS.not($(this)).removeClass('active'); // у остальных убираем активный класс
+	$(this).addClass('active'); //add active class
+	tabS.not($(this)).removeClass('active'); // remove the active class from the remaining items
 
-	var dt = $(this).attr('data-tab'); //при клике достаем значение data-tab
-	var di = $('.tab-info[data-info=' + dt + ']'); //получаем нужный элемент по data-info
+	var dt = $(this).attr('data-tab'); //when you click get the data value
+	var di = $('.tab-info[data-info=' + dt + ']'); //get the desired element by data value
 
-	di.css('display', 'block'); //показываем нужный текст
-	$('.tab-info').not(di).css('display', 'none'); // остальной текст скрываем
-	$('.slider').css('background-image', 'url(img/photo-slider-' + dt + '.jpg)'); //смена бэкграунд картинки
+	di.css('display', 'block'); //show the desired text
+	$('.tab-info').not(di).css('display', 'none'); // the rest of the text hide
+	$('.slider').css('background-image', 'url(img/photo-slider-' + dt + '.jpg)'); //change background pictures
 });
 
-//ткрытие и закрытие навигации левого бара
+//opening and closing the left sidebar navigation
 $('.navigation img').on('click', function() {
 	$('.navigation ul').slideToggle(400);
 });
 
-//открытие и закрытие второго блока левого бара
+//opening and closing the second sidebar navigation
 $('.best-articles img').on('click', function() {
 	$('.recon').slideToggle(400);
 });
